@@ -1,0 +1,9 @@
+import requests
+URL="https://www.scrapethissite.com/pages/simple/"
+res=requests.get(URL)
+print(res.status_code)
+if(res.status_code==200):
+ print(res.headers)
+with open("scrapped_data/data1.html","w") as f:
+    f.write(res.text)
+    res
