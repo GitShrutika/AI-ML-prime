@@ -1,0 +1,5 @@
+import requests
+from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup
+with open("scrapedata/data1.html","r") as f:
+    html_content=f.read()
