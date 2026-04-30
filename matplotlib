@@ -1,0 +1,11 @@
+pip install matplotlib
+import matplotlib.pyplot as plt
+X=[1,2,3,4]
+Y=[4,5,8,9]
+plt.plot(X,Y)
+
+plt.title("x aani y cha graph")
+
+plt.xlabel("x cha graph")
+plt.ylabel("kuch to on y")
+plt.show()#we can also merge the two graphs and it apper in 2 colors then use label and legand for colors
