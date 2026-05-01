@@ -1,0 +1,12 @@
+names=["shrutika",
+       "shiv",
+       "arshin",
+       "dolly"]
+X=[25,28,33,38]
+Y=[40,65,89,96]
+plt.bar(X,Y)
+plt.title("grape ex")
+plt.xlabel("kahitri in x")
+plt.ylabel("kuch to in y")
+for i in range(len(X)):
+  plt.text(X[i],Y[i]+2,names[i],ha="center")
