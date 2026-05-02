@@ -1,0 +1,20 @@
+import numpy as np
+names=["shrutika",
+       "shiv",
+       "arshin",
+       "dolly"]
+X=[10,28,33,44]
+Y=[4,65,80,9]
+A=[10,20,60,42]
+B=[12,45,89,90]
+
+x=np.arange(len(X))
+width=0.4
+
+plt.title("comp of two graphs")
+plt.xlabel("x line1")
+plt.ylabel("y line1")
+plt.bar(x-width/2,Y,width,label="x cha graph")
+plt.bar(x+width/2,B,width,label="y cha graph")
+for i in range(len(X)):
+  plt.text(X[i],Y[i],names[i],ha="center")
