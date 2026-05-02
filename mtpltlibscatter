@@ -1,0 +1,28 @@
+people=[1,2,3,4,5,6,7,8,9,0]
+age=[10,20,30,40,50,60,70,80,90,00]
+BP=[100,200,300,400,500,600,700,800,900,000]
+colors=["green" if x < 135 else "red" for x in BP ]
+plt.scatter(age,BP,color=colors,s=BP,marker="o",alpha=0.2)
+plt.title("age vs bp")
+plt.grid()
+people=[1,2,3,4,5,6,7,8,9,0]
+age=[10,20,30,40,50,60,70,80,90,00]
+BP=[100,200,300,400,500,600,700,800,900,000]
+colors=["green" if x < 135 else "red" for x in BP ]
+plt.scatter(age,BP,cmap="plasma",s=BP,marker="o",c=BP)
+plt.title("age vs bp")
+plt.grid()
+plt.colorbar()
+people=[1,2,3,4,5,6,7,8,9,0]
+age=[10,20,30,40,50,60,70,80,90,00]
+BP=[100,200,300,400,500,600,700,800,900,000]
+colors=["green" if x < 135 else "red" for x in BP ]
+plt.scatter(age,BP,cmap="plasma",s=BP,marker="o",c=BP)
+plt.title("age vs bp")
+plt.grid()
+plt.colorbar()
+
+for i in range(len(people)):
+  plt.annotate(people[i],xy=(age[i],BP[i]),xytext=(age[i]+4,BP[i]+8))
+    
+plt.xlim(min(age),max(BP)+10)
