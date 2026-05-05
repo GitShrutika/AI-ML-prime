@@ -1,0 +1,14 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+np.random.seed(0)
+scores=np.random.normal(70,10,100)
+plt.hist(scores,color="skyblue",edgecolor="black",bins=20)
+plt.xlabel("scores")
+plt.ylabel("max students")
+print(scores)
+xtran=[1.23,3.45,1.67,5.63,2.78,7.89,3.78,9.04,6.79,3.67,4.34,4.34,45.567,
+       34.56,56.5,56.45,56.56,33.46,44.56,0]
+ytran=[0,23.23,45.5,45,78,89,34,77,92,53,43,44,78,33,45,48,32,6,8,9]
+plt.hist(xtran,color="skyblue",edgecolor="black",bins=10,alpha=0.5)
+plt.hist(ytran,color="green",edgecolor="black",bins=10,alpha=0.5)
