@@ -1,0 +1,67 @@
+#sub plots
+import numpy as np
+x=[1,2,3,4,5,6,7,8,9,90]
+
+y1=[np.sqrt(i) for i in x]
+y2=[i*2 for i in x]
+y3=[i**3 for i in x]
+y4=[i**2 for i in x]
+
+plt.subplot(2,2,1)
+plt.plot(x,y1)
+plt.title("plt1s")
+
+plt.subplot(2,2,2)
+plt.plot(x,y2)
+plt.title("plt2double")
+
+plt.subplot(2,2,3)
+plt.plot(x,y3)
+plt.title("plt3sqroot")
+
+plt.subplot(2,2,4)
+plt.plot(x,y4)
+plt.title("plt4sqroot")
+
+plt.tight_layout()
+fig ,ax= plt.subplots(2,2,figsize=(7,7))
+
+ax[0][0].plot(x,y1)
+ax[0][0].set_title("plt1")
+ax[0][0].set_xlabel("xaxis")
+ax[0][0].set_ylabel("yaxis")
+
+ax[0][1].plot(x,y2)
+ax[0][1].set_title("plt2")
+
+ax[1][0].plot(x,y3)
+ax[1][0].set_title("plt3")
+
+ax[1][1].plot(x,y4)
+ax[1][1].set_title("plt4")
+fig.tight_layout()
+fig.suptitle("sorted graphs")
+#tempr graph of citys
+dats=["sun","mon","tue","wed","thu"]
+cityes=["pune","sas","bar","dor"]
+
+tempr=[
+    [1,2,3,4,5],
+    [5,2,8,9,4],
+    [5,6,4,8,4],
+[7,9,3,7,2]]
+
+fig,axi=plt.subplots(2,2)
+city_no=0
+
+for i in range (2):
+    for j in range(2):
+        axi[i][j].plot(dats,tempr[city_no])
+        axi[i][j].set_title(cityes[city_no])
+        city_no=+1
+
+        fig.supxlabel("days")
+        fig.supylabel("tempr")
+
+        fig.suptitle("temprincityes")
+        fig.tight_layout()
